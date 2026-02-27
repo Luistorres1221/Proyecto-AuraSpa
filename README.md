@@ -6,13 +6,6 @@ Una aplicación web moderna y responsive para la gestión de servicios de spa y 
 
 **Aura Spa** es una aplicación SPA (Single Page Application) completa diseñada para simplificar la reserva de servicios de spa, gestión de personal y operaciones comerciales. Proporciona una interfaz intuitiva para que los clientes reserven citas y un panel administrativo integral para las operaciones del negocio.
 
-### Estadísticas Clave
-- **Total de Líneas de Código**: ~1,800 (archivo monolítico App.jsx con estructura modular)
-- **React Hooks Utilizados**: 8+ (useState, useEffect, useContext, useRef, useMemo, useCallback)
-- **Soporte de Idiomas**: 2 (Español, Inglés)
-- **Pestañas de Administración**: 12+ secciones de configuración
-- **Autenticación**: Inicio de sesión, recuperación de contraseña, gestión de sesiones
-- **Imágenes Optimizadas**: 50-100KB a ~5-10KB (Compresión con Canvas API)
 
 ---
 
@@ -20,7 +13,7 @@ Una aplicación web moderna y responsive para la gestión de servicios de spa y 
 
 ### 🔐 Usuario Administrador
 ```
-Nombre de Usuario: admin
+Nombre de Usuario: admin@auraspa.com
 Contraseña: admin123
 ```
 **Acceso**: Panel de administración con 12+ pestañas de configuración
@@ -33,7 +26,7 @@ Contraseña: admin123
 
 ### 👤 Usuario Cliente
 ```
-Nombre de Usuario: cliente
+Nombre de Usuario: cliente@email.com
 Contraseña: cliente123
 ```
 **Acceso**: Sistema de reserva de citas
