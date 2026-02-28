@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useRef, createContext, useContext } from "react";
+import { authAPI, userAPI, appointmentAPI, adminAPI, healthAPI, authHelpers } from "./services/api.js";
 
 /* ═══════════════════════════ TRANSLATIONS ══════════════════════════════ */
 const TR = {
@@ -636,9 +637,141 @@ function AuthScreen({onLogin,setPage,initMode="login",users,setUsers}){
   // Determinar si el formulario es válido
   const isFormValid=()=>{if(mode==="login"){return form.email&&form.password&&!fieldErrors.email;}if(mode==="register"){const pwdValid=form.password&&!validatePassword(form.password);const emailValid=form.email&&!validateEmail(form.email);const phoneValid=form.phone&&!validatePhone(form.phone);const confirmValid=form.confirm&&form.password===form.confirm;return form.name.trim()&&emailValid&&phoneValid&&pwdValid&&confirmValid&&acceptData&&acceptTerms;}};
   
-  const login=()=>{setErr("");const emailErr=validateEmail(form.email);if(emailErr){setErr(emailErr);setFieldErrors({email:emailErr});return;}const u=users.find(u=>u.email===form.email);if(!u){setErr(t.auth.wrongCreds);return;}if(!u.active){setErr("La cuenta está inactiva. Contacta al administrador.");return;}const attemptsKey=form.email;const attempts=loginAttempts[attemptsKey]||0;if(attempts>=5){setErr("Cuenta bloqueada por múltiples intentos fallidos. Intenta más tarde.");return;}if(!verifyPassword(form.password,u.password)){const newAttempts=attempts+1;setLoginAttempts(prev=>({...prev,[attemptsKey]:newAttempts}));setErr(t.auth.wrongCreds);setTimeout(()=>setLoginAttempts(prev=>({...prev,[attemptsKey]:0})),60000);return;}setLoginAttempts(prev=>({...prev,[attemptsKey]:0}));const updatedUser={...u,lastLogin:new Date().toISOString()};setUsers(p=>p.map(x=>x.id===u.id?updatedUser:x));onLogin(updatedUser);};
+  // LOGIN - Usando Backend API
+  const login = async () => {
+    setErr("");
+    const emailErr = validateEmail(form.email);
+    if (emailErr) {
+      setErr(emailErr);
+      setFieldErrors({ email: emailErr });
+      return;
+    }
+    
+    try {
+      // Llamar al endpoint de login del backend
+      const response = await authAPI.login(form.email, form.password);
+      
+      // Guardar token y usuario en localStorage
+      authHelpers.saveAuthData(response);
+      
+      // Convertir respuesta del backend al formato esperado por la app
+      const userData = {
+        ...response.user,
+        id: response.user.id,
+        lastLogin: new Date().toISOString(),
+        password: "***" // No almacenar contraseña en memoria
+      };
+      
+      // Actualizar estado local de usuarios (para compatibilidad)
+      setUsers(p => p.map(x => x.id === userData.id ? userData : x).length > 0 ? 
+        p.map(x => x.id === userData.id ? userData : x) : 
+        [...p, userData]
+      );
+      
+      // Llamar callback de login exitoso
+      onLogin(userData);
+      
+    } catch (error) {
+      console.error('Login error:', error);
+      
+      // Manejar diferentes tipos de errores
+      if (error.status === 401) {
+        setErr("Email o contraseña incorrectos.");
+      } else if (error.status === 403) {
+        setErr("La cuenta está inactiva. Contacta al administrador.");
+      } else if (error.status === 429) {
+        setErr("Demasiados intentos fallidos. Intenta más tarde.");
+      } else {
+        setErr(error.data?.message || "Error al conectar con el servidor. Intenta nuevamente.");
+      }
+    }
+  };
   
-  const register=()=>{setErr("");if(!form.name.trim()){setErr("El nombre es obligatorio.");return;}if(!form.lastname.trim()){setErr("El apellido es obligatorio.");return;}const emailErr=validateEmail(form.email);if(emailErr){setErr(emailErr);setFieldErrors({email:emailErr});return;}const phoneErr=validatePhone(form.phone);if(phoneErr){setErr(phoneErr);setFieldErrors({phone:phoneErr});return;}const pwdErr=validatePassword(form.password);if(pwdErr){setErr(pwdErr);setFieldErrors({password:pwdErr});return;}if(form.password!==form.confirm){setErr(t.auth.pwdMismatch);setFieldErrors({confirm:t.auth.pwdMismatch});return;}if(!acceptData||!acceptTerms){setErr(t.config.acceptTerms);return;}const hashedPwd=hashPassword(form.password);const u={id:Date.now(),email:form.email,password:hashedPwd,role:"client",name:form.name,lastname:form.lastname,phone:form.phone,emailVerified:false,createdAt:todayStr(),lastLogin:null,active:true,failedAttempts:0};setUsers(p=>[...p,u]);setForm({name:"",lastname:"",email:"",phone:"",password:"",confirm:""});onLogin(u);};
+  // REGISTER - Usando Backend API
+  const register = async () => {
+    setErr("");
+    if (!form.name.trim()) {
+      setErr("El nombre es obligatorio.");
+      return;
+    }
+    if (!form.lastname.trim()) {
+      setErr("El apellido es obligatorio.");
+      return;
+    }
+    
+    const emailErr = validateEmail(form.email);
+    if (emailErr) {
+      setErr(emailErr);
+      setFieldErrors({ email: emailErr });
+      return;
+    }
+    
+    const phoneErr = validatePhone(form.phone);
+    if (phoneErr) {
+      setErr(phoneErr);
+      setFieldErrors({ phone: phoneErr });
+      return;
+    }
+    
+    const pwdErr = validatePassword(form.password);
+    if (pwdErr) {
+      setErr(pwdErr);
+      setFieldErrors({ password: pwdErr });
+      return;
+    }
+    
+    if (form.password !== form.confirm) {
+      setErr(t.auth.pwdMismatch);
+      setFieldErrors({ confirm: t.auth.pwdMismatch });
+      return;
+    }
+    
+    if (!acceptData || !acceptTerms) {
+      setErr(t.config.acceptTerms);
+      return;
+    }
+    
+    try {
+      // Llamar al endpoint de registro del backend
+      const response = await authAPI.register({
+        name: form.name,
+        lastname: form.lastname,
+        email: form.email,
+        phone: form.phone,
+        password: form.password
+      });
+      
+      // Guardar token y usuario en localStorage
+      authHelpers.saveAuthData(response);
+      
+      // Convertir respuesta del backend al formato esperado
+      const userData = {
+        ...response.user,
+        id: response.user.id,
+        createdAt: todayStr(),
+        lastLogin: new Date().toISOString(),
+        password: "***"
+      };
+      
+      // Actualizar estado local
+      setUsers(p => [...p, userData]);
+      setForm({ name: "", lastname: "", email: "", phone: "", password: "", confirm: "" });
+      
+      // Llamar callback de login exitoso
+      onLogin(userData);
+      
+    } catch (error) {
+      console.error('Register error:', error);
+      
+      if (error.status === 409) {
+        setErr("Este email ya está registrado. Intenta con otro.");
+      } else if (error.status === 400) {
+        setErr(error.data?.message || "Datos inválidos. Verifica la información.");
+      } else {
+        setErr(error.data?.message || "Error al registrarse. Intenta nuevamente.");
+      }
+    }
+  };
   
   const handleKeyPress=e=>{if(e.key==="Enter"&&isFormValid()){e.preventDefault();mode==="login"?login():register();}};
   
@@ -1173,7 +1306,69 @@ function BookingFlow({user,appointments,setAppointments,services,professionals,s
   const selSvc=services.find(s=>s.id===sel.serviceId);
   const selPro=professionals.find(p=>p.id===sel.professionalId);
   const slots=useMemo(()=>{if(!sel.serviceId||!sel.professionalId||!sel.date)return[];return getSlots(sel.serviceId,sel.professionalId,sel.date,appointments,services,professionals);},[sel,appointments,services,professionals]);
-  const confirm=()=>{const apt={id:Date.now(),clientName:user.name,clientEmail:user.email,clientPhone:user.phone||"",serviceId:sel.serviceId,professionalId:sel.professionalId,date:sel.date,time:sel.time,status:"confirmed",notes:"",history:[{action:"Creada por cliente",at:new Date().toLocaleString("es-CO")}]};setAppointments(p=>[...p,apt]);setStep(3);};
+  const confirm = async () => {
+    try {
+      // Preparar datos de la cita
+      const aptData = {
+        serviceId: sel.serviceId,
+        professionalId: sel.professionalId,
+        date: sel.date,
+        time: sel.time,
+        notes: ""
+      };
+      
+      // Enviar cita al backend
+      const response = await appointmentAPI.bookAppointment(aptData);
+      
+      // Convertir respuesta del backend al formato local
+      const apt = {
+        id: response.id || Date.now(),
+        clientName: user.name,
+        clientEmail: user.email,
+        clientPhone: user.phone || "",
+        serviceId: sel.serviceId,
+        professionalId: sel.professionalId,
+        date: sel.date,
+        time: sel.time,
+        status: response.status || "confirmed",
+        notes: response.notes || "",
+        history: response.history || [{
+          action: "Creada por cliente",
+          at: new Date().toLocaleString("es-CO")
+        }]
+      };
+      
+      // Guardar cita en estado local
+      setAppointments(p => [...p, apt]);
+      setStep(3);
+      
+    } catch (error) {
+      console.error('Error al crear cita:', error);
+      
+      // Mostrar error
+      alert(`Error al crear cita: ${error.data?.message || error.message}`);
+      
+      // Fall back: guardar localmente si el servidor falla (para demo)
+      const apt = {
+        id: Date.now(),
+        clientName: user.name,
+        clientEmail: user.email,
+        clientPhone: user.phone || "",
+        serviceId: sel.serviceId,
+        professionalId: sel.professionalId,
+        date: sel.date,
+        time: sel.time,
+        status: "pending", // Marcar como pendiente si no se sincronizó
+        notes: "[OFFLINE] Cita sincronizará cuando se restaure conexión",
+        history: [{
+          action: "Creada en modo offline",
+          at: new Date().toLocaleString("es-CO")
+        }]
+      };
+      setAppointments(p => [...p, apt]);
+      setStep(3);
+    }
+  };
   return<main id="main-content"tabIndex={-1}style={{maxWidth:720,margin:"0 auto",padding:"40px 16px"}}>
     <div aria-label="Pasos"style={{display:"flex",gap:0,marginBottom:32,borderRadius:4,overflow:"hidden",border:`1px solid ${col.sand}`}}>
       {[t.booking.selectService,t.booking.selectSchedule,t.booking.confirm].map((s,i)=>(
@@ -1712,8 +1907,74 @@ export default function App(){
   useEffect(()=>{saveToStorage("aura_landing_images",landingImages);},[landingImages]);
   useEffect(()=>{saveToStorage("aura_carousel_images",carouselImages);},[carouselImages]);
 
-  const handleLogin=u=>{setUser(u);setPage(u.role==="admin"?"admin":"home");};
-  const handleLogout=()=>{const toast=document.createElement("div");toast.style.cssText="position:fixed;bottom:20px;right:20px;background:#3D2B24;color:#FAF7F2;padding:16px 24px;borderRadius:8px;fontSize:14px;zIndex:10000;animation:fadeUp 0.3s ease;";toast.textContent="Sesión finalizada";document.body.appendChild(toast);setTimeout(()=>{toast.remove();},2000);setUser(null);setPage("home");};
+  // Efecto para restaurar sesión existente y cargar datos del backend
+  useEffect(() => {
+    const storedUser = authHelpers.getStoredUser();
+    if (storedUser && authHelpers.isAuthenticated()) {
+      setUser(storedUser);
+    }
+    
+    // Cargar servicios del backend si hay token
+    if (authHelpers.isAuthenticated()) {
+      loadServicesFromBackend();
+      loadProfessionalsFromBackend();
+    }
+  }, []);
+  
+  // Cargar servicios del backend
+  const loadServicesFromBackend = async () => {
+    try {
+      const response = await adminAPI.getServices();
+      if (response && response.length > 0) {
+        setServices(response);
+      }
+    } catch (error) {
+      console.warn('No se pudieron cargar servicios del backend:', error);
+      // Usar datos locales como fallback
+    }
+  };
+  
+  // Cargar profesionales del backend
+  const loadProfessionalsFromBackend = async () => {
+    try {
+      const response = await adminAPI.getProfessionals();
+      if (response && response.length > 0) {
+        setProfessionals(response);
+      }
+    } catch (error) {
+      console.warn('No se pudieron cargar profesionales del backend:', error);
+      // Usar datos locales como fallback
+    }
+  };
+
+  const handleLogin = (u) => {
+    setUser(u);
+    setPage(u.role === "admin" ? "admin" : "home");
+  };
+  
+  const handleLogout = async () => {
+    try {
+      // Intentar logout en el servidor
+      await authAPI.logout();
+    } catch (error) {
+      console.warn('Logout en servidor falló:', error);
+      // Continuar con logout local aunque el servidor falle
+    }
+    
+    // Limpiar datos de autenticación
+    authHelpers.clearAuthData();
+    
+    // Mostrar notificación
+    const toast = document.createElement("div");
+    toast.style.cssText = "position:fixed;bottom:20px;right:20px;background:#3D2B24;color:#FAF7F2;padding:16px 24px;borderRadius:8px;fontSize:14px;zIndex:10000;animation:fadeUp 0.3s ease;";
+    toast.textContent = "Sesión finalizada";
+    document.body.appendChild(toast);
+    setTimeout(() => { toast.remove(); }, 2000);
+    
+    // Limpiar estado
+    setUser(null);
+    setPage("home");
+  };
 
   // keep logged-in user in sync with users list
   useEffect(()=>{if(user){const fresh=users.find(u=>u.id===user.id);if(fresh&&(fresh.name!==user.name||fresh.email!==user.email))setUser(fresh);}},[ users]);
