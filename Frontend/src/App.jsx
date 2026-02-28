@@ -19,6 +19,8 @@ const TR = {
     admin:{ summary:"Resumen",appointments:"Citas",services:"Servicios",professionals:"Profesionales",users:"Usuarios",today:"Citas hoy",confirmed:"Confirmadas",pending:"Pendientes",attended:"Atendidas",cancelled:"Canceladas",agenda:"Agenda de hoy",noToday:"Sin citas para hoy.",manage:"Gestionar",allFilter:"Todas",noFilter:"Sin citas con este filtro.",newService:"+ Nuevo servicio",newPro:"+ Nueva terapeuta",activeApts:"citas activas",detail:"Detalle de Cita",client:"Cliente",phone:"Teléfono",email:"Correo",service:"Servicio",duration:"Duración",professional:"Profesional",dateTime:"Fecha y hora",statusLbl:"Estado",notes:"Observaciones",notesPlaceholder:"Notas internas...",doConfirm:"✓ Confirmar",doAttended:"✓ Atendida",doReschedule:"🗓 Reprogramar",doCancel:"✕ Cancelar",restore:"Restaurar",trace:"Trazabilidad",newDate:"Nueva fecha y hora",newDateLbl:"Fecha",confirmResched:"Confirmar reprogramación",cancelResched:"Cancelar",serviceName:"Nombre *",category:"Categoría",durationMin:"Duración (min)",price:"Precio COP",save:"Guardar",cancel:"Cancelar",proName:"Nombre *",specialty:"Especialidad",startTime:"Inicio jornada",endTime:"Fin jornada",active:"Activo",inactive:"Inactivo",activeF:"Activa",inactiveF:"Inactiva",adminPanel:"Panel Admin" },
     profile:{ title:"Mi Perfil",subtitle:"Gestiona tu información personal",name:"Nombre completo",emailLbl:"Correo electrónico",phoneLbl:"Teléfono",roleLbl:"Rol",roleAdmin:"Administrador",roleClient:"Cliente",roleProfessional:"Terapeuta",memberSince:"Miembro desde",totalApts:"Citas totales",attendedApts:"Atendidas",editProfile:"Editar perfil",saveChanges:"Guardar cambios",cancel:"Cancelar",changePassword:"Cambiar contraseña",currentPwd:"Contraseña actual",newPwd:"Nueva contraseña",confirmNewPwd:"Confirmar nueva contraseña",pwdChanged:"Contraseña actualizada.",pwdWrong:"Contraseña actual incorrecta.",pwdMismatch:"Las contraseñas no coinciden.",profileUpdated:"Perfil actualizado.",usersTitle:"Gestión de Usuarios",usersSubtitle:"Administra todos los usuarios del sistema",newUser:"+ Nuevo usuario",editUser:"Editar",deleteUser:"Eliminar",cantDeleteSelf:"No puedes eliminar tu propia cuenta.",cantDeleteLast:"Debe existir al menos un administrador.",userSaved:"Usuario guardado.",userExists:"Este correo ya está registrado.",confirmDelete:"¿Eliminar usuario?",confirmDeleteBody:"Esta acción no se puede deshacer.",yes:"Sí, eliminar",no:"Cancelar",usersCount:"usuarios registrados",allRoles:"Todos los roles",noUsers:"Sin usuarios con este filtro.",passwordLbl:"Contraseña",roleAssigned:"Rol asignado",searchUser:"Buscar usuario..." },
     auth:{ login:"Iniciar sesión",register:"Registrarse",email:"Correo *",password:"Contraseña *",confirmPwd:"Confirmar contraseña *",name:"Nombre *",phone:"Teléfono",enter:"Ingresar",create:"Crear cuenta",wrongCreds:"Credenciales incorrectas.",fillAll:"Completa todos los campos.",pwdMismatch:"Las contraseñas no coinciden.",emailUsed:"Correo ya registrado.",forgotPassword:"¿Olvidaste tu contraseña?",recoverTitle:"Recuperar Contraseña",recoverSub:"Ingresa tu correo para restablecer tu contraseña",recoverBtn:"Enviar enlace de recuperación",recoverSent:"Si el correo está registrado, recibirás un enlace para restablecer tu contraseña.",resetTitle:"Restablecer Contraseña",resetSub:"Crea una nueva contraseña segura",newPassword:"Nueva contraseña *",confirmPassword:"Confirmar contraseña *",resetBtn:"Restablecer contraseña",invalidToken:"El enlace ha expirado. Solicita uno nuevo.",backToLogin:"Volver a Iniciar sesión",passwordRequirements:"Mínimo 8 caracteres, debe contener letras y números" },
+    landing:{ galleryTitle:"Galería de Inspiración",galleryDesc:"Descubre la belleza y armonía que aguarda en nuestro spa con cada tratamiento cuidadosamente diseñado para ti",carouselTitle:"Experiencias Aura Spa",carouselSub:"Renovación y Bienestar",doseBenestar:"Tu Dosis de Bienestar",bookNow:"Reservar Ahora →",viewMore:"Ver Más Servicios",noServices:"Sin servicios registrados",companyInfo:"Información de la Empresa",location:"Ubicacion",phone:"Telefono",email:"Correo",schedule:"Horario",weekdays:"Lunes - Viernes",saturday:"Sábado",sunday:"Domingo",followUs:"Síguenos" },
+    config:{ configTitle:"Configuracion del Sistema 🔧",carouselGallery:"🎠 Carrusel \"Galería de Inspiración\" (5 Imágenes)",general:"General",usuarios:"Usuarios",servicios:"Servicios",empleados:"Empleados",agenda:"Agenda",pagos:"Pagos",notif:"Notificaciones",reportes:"Reportes",seguridad:"Seguridad",imagenes:"Imágenes Landing",personalizacion:"Personalizacion",infoGeneral:"Informacion General",businessName:"Nombre Comercial",legalName:"Razon Social",nit:"NIT / RUT",location:"Ubicacion",address:"Direccion",dept:"Departamento",city:"Ciudad",contact:"Contacto",phone:"Telefono Principal",email:"Correo Electronico",schedules:"Horarios",weekdays:"Lunes - Viernes",openTime:"Hora Apertura",closeTime:"Hora Cierre",saturday:"Sábado",sunday:"Domingo",socialMedia:"Redes Sociales",instagram:"Instagram",facebook:"Facebook",whatsapp:"WhatsApp",welcomeMsg:"Mensaje de Bienvenida",msgClients:"Mensaje para Clientes",save:"Guardar Cambios",userMgmt:"Gestion de Usuarios",about:"Sobre nosotros",policies:"Políticas",data:"Datos",terms:"Términos",cookies:"Cookies",acceptTerms:"Debes aceptar la política de tratamiento de datos y los términos y condiciones para continuar." },
   },
   en: {
     brand:"Aura Spa",
@@ -37,8 +39,11 @@ const TR = {
     admin:{ summary:"Summary",appointments:"Appointments",services:"Services",professionals:"Professionals",users:"Users",today:"Today's apts",confirmed:"Confirmed",pending:"Pending",attended:"Attended",cancelled:"Cancelled",agenda:"Today's agenda",noToday:"No appointments today.",manage:"Manage",allFilter:"All",noFilter:"No appointments with this filter.",newService:"+ New service",newPro:"+ New therapist",activeApts:"active apts",detail:"Appointment Detail",client:"Client",phone:"Phone",email:"Email",service:"Service",duration:"Duration",professional:"Professional",dateTime:"Date & time",statusLbl:"Status",notes:"Notes",notesPlaceholder:"Internal notes...",doConfirm:"✓ Confirm",doAttended:"✓ Mark Attended",doReschedule:"🗓 Reschedule",doCancel:"✕ Cancel",restore:"Restore",trace:"History",newDate:"New date & time",newDateLbl:"Date",confirmResched:"Confirm reschedule",cancelResched:"Cancel",serviceName:"Name *",category:"Category",durationMin:"Duration (min)",price:"Price COP",save:"Save",cancel:"Cancel",proName:"Name *",specialty:"Specialty",startTime:"Start time",endTime:"End time",active:"Active",inactive:"Inactive",activeF:"Active",inactiveF:"Inactive",adminPanel:"Admin Panel" },
     profile:{ title:"My Profile",subtitle:"Manage your personal information",name:"Full name",emailLbl:"Email address",phoneLbl:"Phone",roleLbl:"Role",roleAdmin:"Administrator",roleClient:"Client",roleProfessional:"Therapist",memberSince:"Member since",totalApts:"Total appointments",attendedApts:"Attended",editProfile:"Edit profile",saveChanges:"Save changes",cancel:"Cancel",changePassword:"Change password",currentPwd:"Current password",newPwd:"New password",confirmNewPwd:"Confirm new password",pwdChanged:"Password updated.",pwdWrong:"Current password is incorrect.",pwdMismatch:"Passwords do not match.",profileUpdated:"Profile updated.",usersTitle:"User Management",usersSubtitle:"Manage all system users",newUser:"+ New user",editUser:"Edit",deleteUser:"Delete",cantDeleteSelf:"You cannot delete your own account.",cantDeleteLast:"At least one administrator must exist.",userSaved:"User saved.",userExists:"Email already registered.",confirmDelete:"Delete user?",confirmDeleteBody:"This action cannot be undone.",yes:"Yes, delete",no:"Cancel",usersCount:"registered users",allRoles:"All roles",noUsers:"No users with this filter.",passwordLbl:"Password",roleAssigned:"Assigned role",searchUser:"Search user..." },
     auth:{ login:"Sign in",register:"Sign up",email:"Email *",password:"Password *",confirmPwd:"Confirm password *",name:"Full name *",phone:"Phone",enter:"Sign in",create:"Create account",wrongCreds:"Incorrect credentials.",fillAll:"Please fill all required fields.",pwdMismatch:"Passwords do not match.",emailUsed:"Email already registered.",forgotPassword:"Forgot your password?",recoverTitle:"Recover Password",recoverSub:"Enter your email to reset your password",recoverBtn:"Send recovery link",recoverSent:"If the email is registered, you will receive a link to reset your password.",resetTitle:"Reset Password",resetSub:"Create a secure new password",newPassword:"New password *",confirmPassword:"Confirm password *",resetBtn:"Reset password",invalidToken:"The link has expired. Request a new one.",backToLogin:"Back to Sign In",passwordRequirements:"Minimum 8 characters, must contain letters and numbers" },
+    landing:{ galleryTitle:"Inspiration Gallery",galleryDesc:"Discover the beauty and harmony that awaits in our spa with each treatment carefully designed for you",carouselTitle:"Aura Spa Experiences",carouselSub:"Renewal and Wellness",doseBenestar:"Your Wellness Dose",bookNow:"Book Now →",viewMore:"View More Services",noServices:"No registered services",companyInfo:"Company Information",location:"Location",phone:"Phone",email:"Email",schedule:"Schedule",weekdays:"Monday - Friday",saturday:"Saturday",sunday:"Sunday",followUs:"Follow Us" },
+    config:{ configTitle:"System Configuration 🔧",carouselGallery:"🎠 Carousel \"Inspiration Gallery\" (5 Images)",general:"General",usuarios:"Users",servicios:"Services",empleados:"Staff",agenda:"Schedule",pagos:"Payments",notif:"Notifications",reportes:"Reports",seguridad:"Security",imagenes:"Landing Images",personalizacion:"Customization",infoGeneral:"General Information",businessName:"Business Name",legalName:"Legal Name",nit:"NIT / RUT",location:"Location",address:"Address",dept:"Department",city:"City",contact:"Contact",phone:"Main Phone",email:"Email Address",schedules:"Schedules",weekdays:"Monday - Friday",openTime:"Opening Time",closeTime:"Closing Time",saturday:"Saturday",sunday:"Sunday",socialMedia:"Social Media",instagram:"Instagram",facebook:"Facebook",whatsapp:"WhatsApp",welcomeMsg:"Welcome Message",msgClients:"Message for Clients",save:"Save Changes",userMgmt:"User Management",about:"About Us",policies:"Policies",data:"Data",terms:"Terms",cookies:"Cookies",acceptTerms:"You must accept the data processing policy and terms and conditions to continue." },
   }
 };
+
 
 /* ═══════════════════════════ CONTEXTS ══════════════════════════════════ */
 const LangCtx = createContext();
@@ -182,9 +187,12 @@ const Avatar=({name,size=48,role})=>{
 
 const Lbl=({children,htmlFor})=>{const{hc}=useA11y();const col=cc(hc);return<label htmlFor={htmlFor}style={{fontSize:12,fontWeight:500,color:col.brown,letterSpacing:"0.06em",textTransform:"uppercase",display:"block",marginBottom:6}}>{children}</label>;};
 
-const Input=({label,id,...p})=>{
+const Input=({label,id,showPasswordToggle=false,isPasswordVisible=false,onTogglePassword,type,...p})=>{
   const{hc}=useA11y();const col=cc(hc);const iid=id||(label?label.replace(/\s+/g,"-").toLowerCase():undefined);
-  return<div style={{display:"flex",flexDirection:"column",gap:6}}>{label&&<Lbl htmlFor={iid}>{label}</Lbl>}<input id={iid}aria-label={label}style={{border:`1px solid ${col.sand}`,borderRadius:4,padding:"10px 14px",background:col.white,color:col.espresso,fontSize:14,width:"100%",transition:"border-color 0.2s"}}onFocus={e=>e.target.style.borderColor=col.brown}onBlur={e=>e.target.style.borderColor=col.sand}{...p}/></div>;
+  const isPassword=type==="password";
+  const inputType=isPassword?(isPasswordVisible?"text":"password"):(type||"text");
+  const handleInputChange=p.onChange?e=>{if(type==="tel"){const onlyNumbers=e.target.value.replace(/[^0-9]/g,"");e.target.value=onlyNumbers;}p.onChange(e);}:undefined;
+  return<div style={{display:"flex",flexDirection:"column",gap:6}}>{label&&<Lbl htmlFor={iid}>{label}</Lbl>}<div style={{position:"relative",display:"flex",alignItems:"center"}}><input id={iid}aria-label={label}style={{border:`1px solid ${col.sand}`,borderRadius:4,padding:"10px 14px",background:col.white,color:col.espresso,fontSize:14,width:"100%",transition:"border-color 0.2s",paddingRight:isPassword&&showPasswordToggle?40:14}}type={inputType}onFocus={e=>e.target.style.borderColor=col.brown}onBlur={e=>e.target.style.borderColor=col.sand}{...p}onChange={handleInputChange}/>{isPassword&&showPasswordToggle&&<button type="button"onClick={onTogglePassword}aria-label={isPasswordVisible?"Ocultar contraseña":"Mostrar contraseña"}style={{position:"absolute",right:10,background:"none",border:"none",cursor:"pointer",color:col.brown,padding:4,pointerEvents:"auto",display:"flex",alignItems:"center",justifyContent:"center"}}><svg width="20"height="20"viewBox="0 0 24 24"fill="none"stroke="currentColor"strokeWidth="1.5"strokeLinecap="round"strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12"cy="12"r="3"/></svg></button>}</div></div>;
 };
 
 const Sel=({label,id,children,...p})=>{
@@ -194,9 +202,10 @@ const Sel=({label,id,children,...p})=>{
 
 const Btn=({variant="primary",children,style={},...p})=>{
   const{hc}=useA11y();const col=cc(hc);
-  const base={border:"none",borderRadius:3,padding:"10px 22px",fontSize:13,fontWeight:500,letterSpacing:"0.06em",transition:"all 0.2s",cursor:"pointer"};
+  const isDisabled=p.disabled;
+  const base={border:"none",borderRadius:3,padding:"10px 22px",fontSize:13,fontWeight:500,letterSpacing:"0.06em",transition:"all 0.2s",cursor:isDisabled?"not-allowed":"pointer",opacity:isDisabled?0.5:1};
   const v=hc?{primary:{background:"#fff",color:"#000",border:"2px solid #fff"},secondary:{background:"transparent",color:"#fff",border:"2px solid #fff"},ghost:{background:"transparent",color:"#fff",padding:"8px 14px"},danger:{background:"transparent",color:"#f55",border:"2px solid #f55"},success:{background:"transparent",color:"#5f5",border:"2px solid #5f5"},gold:{background:"#fff",color:"#000"}}:{primary:{background:col.espresso,color:col.cream},secondary:{background:"transparent",color:col.espresso,border:`1px solid ${col.sand}`},ghost:{background:"transparent",color:col.brown,padding:"8px 14px"},danger:{background:"#FDECEA",color:"#9B1C1C",border:"1px solid #FECACA"},success:{background:"#EAF5EC",color:"#1E7E34",border:"1px solid #BBF7D0"},gold:{background:col.gold,color:col.white}};
-  return<button style={{...base,...v[variant],...style}}{...p}>{children}</button>;
+  return<button style={{...base,...v[variant],...style}}disabled={isDisabled}{...p}>{children}</button>;
 };
 
 const BackBtn=({onClick})=>{const{t}=useLang();const{hc}=useA11y();const col=cc(hc);return<button onClick={onClick}aria-label={t.booking.back}style={{background:"none",border:"none",color:col.brown,fontSize:13,marginBottom:20,cursor:"pointer",display:"flex",alignItems:"center",gap:6,padding:"6px 0"}}>{t.booking.back}</button>;};
@@ -371,14 +380,14 @@ function LandingPage({setPage,services,landingImages,carouselImages}){
     <section style={{padding:"60px 20px",background:col.white}}>
       <div style={{maxWidth:1100,margin:"0 auto"}}>
         <div style={{textAlign:"center",marginBottom:40}}>
-          <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:12}}>✦ Tu Dosis de Bienestar ✦</p>
-          <h3 className="display"style={{fontSize:42,fontWeight:300,color:col.espresso,marginBottom:20,lineHeight:1.2}}>Galería de Inspiración</h3>
-          <p style={{color:col.g600,marginBottom:28}}>Descubre la belleza y armonía que awaita en nuestro spa con cada tratamiento cuidadosamente diseñado para ti</p>
+          <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.1em",marginBottom:12}}>✦ {t.landing.doseBenestar} ✦</p>
+          <h3 className="display"style={{fontSize:42,fontWeight:300,color:col.espresso,marginBottom:20,lineHeight:1.2}}>{t.landing.galleryTitle}</h3>
+          <p style={{color:col.g600,marginBottom:28}}>{t.landing.galleryDesc}</p>
         </div>
-        <Carousel images={carouselImages} title="Experiencias Aura Spa" subtitle="Renovación y Bienestar"/>
+        <Carousel images={carouselImages} title={t.landing.carouselTitle} subtitle={t.landing.carouselSub}/>
         <div style={{display:"flex",gap:16,justifyContent:"center",marginTop:32}}>
-          <button onClick={()=>setPage("book")}style={{background:col.espresso,color:col.cream,border:"none",padding:"13px 28px",borderRadius:3,fontSize:14,fontWeight:600,cursor:"pointer",transition:"all 0.2s"}}>Reservar Ahora →</button>
-          <button onClick={()=>setPage("services-page")}style={{background:"transparent",border:`1px solid ${col.espresso}`,color:col.espresso,padding:"13px 28px",borderRadius:3,fontSize:14,fontWeight:600,cursor:"pointer",transition:"all 0.2s"}}>Ver Más Servicios</button>
+          <button onClick={()=>setPage("book")}style={{background:col.espresso,color:col.cream,border:"none",padding:"13px 28px",borderRadius:3,fontSize:14,fontWeight:600,cursor:"pointer",transition:"all 0.2s"}}>{t.landing.bookNow}</button>
+          <button onClick={()=>setPage("services-page")}style={{background:"transparent",border:`1px solid ${col.espresso}`,color:col.espresso,padding:"13px 28px",borderRadius:3,fontSize:14,fontWeight:600,cursor:"pointer",transition:"all 0.2s"}}>{t.landing.viewMore}</button>
         </div>
       </div>
     </section>
@@ -457,26 +466,26 @@ function ContactPageNew({setPage,companyData}){
       {toast&&<Toast msg={toast.msg}type={toast.type}/>}
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:32,maxWidth:1000}}>
         <Card style={{padding:32}}>
-          <h3 style={{fontSize:20,fontWeight:600,color:col.espresso,marginBottom:24}}>📍 Información de la Empresa</h3>
+          <h3 style={{fontSize:20,fontWeight:600,color:col.espresso,marginBottom:24}}>📍 {t.landing.companyInfo}</h3>
           <div style={{display:"flex",flexDirection:"column",gap:20}}>
             <div>
-              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:6}}>Ubicacion</p>
+              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:6}}>{t.landing.location}</p>
               <p style={{color:col.g600,lineHeight:1.6,whiteSpace:"pre-line"}}>{companyData?.address||"Cra. 5 #120-45"}</p>
             </div>
             <div>
-              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:6}}>Telefono</p>
+              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:6}}>{t.landing.phone}</p>
               <a href={"tel:"+companyData?.phone}style={{color:col.espresso,textDecoration:"none",fontWeight:500,fontSize:15}}>{companyData?.phone}</a>
             </div>
             <div>
-              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:6}}>Correo</p>
+              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:6}}>{t.landing.email}</p>
               <a href={"mailto:"+companyData?.email}style={{color:col.espresso,textDecoration:"none",fontWeight:500,fontSize:15}}>{companyData?.email}</a>
             </div>
             <div>
-              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:6}}>Horario</p>
-              <p style={{color:col.g600,lineHeight:1.6}}>Lunes - Viernes: {companyData?.weekStart||"09:00"} - {companyData?.weekEnd||"20:00"}<br/>Sábado: {companyData?.satStart||"09:00"} - {companyData?.satEnd||"18:00"}<br/>Domingo: {companyData?.sunStart||"10:00"} - {companyData?.sunEnd||"17:00"}</p>
+              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:6}}>{t.landing.schedule}</p>
+              <p style={{color:col.g600,lineHeight:1.6}}>{t.landing.weekdays}: {companyData?.weekStart||"09:00"} - {companyData?.weekEnd||"20:00"}<br/>{t.landing.saturday}: {companyData?.satStart||"09:00"} - {companyData?.satEnd||"18:00"}<br/>{t.landing.sunday}: {companyData?.sunStart||"10:00"} - {companyData?.sunEnd||"17:00"}</p>
             </div>
             <div style={{marginTop:12,paddingTop:12,borderTop:`1px solid ${col.sand}`}}>
-              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:12}}>Síguenos</p>
+              <p style={{fontSize:12,color:col.brown,fontWeight:600,textTransform:"uppercase",letterSpacing:"0.08em",marginBottom:12}}>{t.landing.followUs}</p>
               <div style={{display:"flex",gap:12}}>
                 {[{icon:"📱",url:"#"},{icon:"f",url:"#"},{icon:"📷",url:"#"}].map((social,i)=><a key={i}href={social.url}style={{display:"flex",alignItems:"center",justifyContent:"center",width:40,height:40,borderRadius:8,background:col.sand,color:col.espresso,textDecoration:"none",fontSize:16,transition:"all 0.2s",cursor:"pointer",fontWeight:600}}onMouseEnter={e=>e.target.style.background=col.espresso+30}onMouseLeave={e=>e.target.style.background=col.sand}>{social.icon}</a>)}
               </div>
@@ -597,18 +606,42 @@ function AboutPage({setPage,initialTab}){
   </main>;
 }
 
+/* ═══════════════════════════ UTILITY FUNCTIONS ════════════════════════ */
+const hashPassword=(pwd)=>{let h=0;for(let i=0;i<pwd.length;i++){const c=pwd.charCodeAt(i);h=((h<<5)-h)+c;h=h&h;}return`hash_${Math.abs(h).toString(36)}_${pwd.length}`;}; 
+const verifyPassword=(pwd,hash)=>hash===hashPassword(pwd);
+
 /* ═══════════════════════════ AUTH SCREEN ═══════════════════════════════ */
 function AuthScreen({onLogin,setPage,initMode="login",users,setUsers}){
   const{t}=useLang();const{hc}=useA11y();const col=cc(hc);
   const[mode,setMode]=useState(initMode);
-  const[form,setForm]=useState({name:"",email:"",phone:"",password:"",confirm:""});
+  const[form,setForm]=useState({name:"",lastname:"",email:"",phone:"",password:"",confirm:""});
+  const[showPassword,setShowPassword]=useState(false);
+  const[showConfirm,setShowConfirm]=useState(false);
   const[err,setErr]=useState("");
+  const[fieldErrors,setFieldErrors]=useState({});
   const[acceptData,setAcceptData]=useState(false);
   const[acceptTerms,setAcceptTerms]=useState(false);
-  const s=k=>e=>setForm(f=>({...f,[k]:e.target.value}));
-  const login=()=>{setErr("");const u=users.find(u=>u.email===form.email&&u.password===form.password);if(!u){setErr(t.auth.wrongCreds);return;}onLogin(u);};
-  const register=()=>{setErr("");if(!form.name||!form.email||!form.password){setErr(t.auth.fillAll);return;}if(form.password!==form.confirm){setErr(t.auth.pwdMismatch);return;}if(!acceptData||!acceptTerms){setErr("Debes aceptar la política de tratamiento de datos y los términos y condiciones para continuar.");return;}if(users.find(u=>u.email===form.email)){setErr(t.auth.emailUsed);return;}const u={id:Date.now(),email:form.email,password:form.password,role:"client",name:form.name,phone:form.phone,createdAt:todayStr()};setUsers(p=>[...p,u]);onLogin(u);};
-  const handleKeyPress=e=>{if(e.key==="Enter"){e.preventDefault();mode==="login"?login():register();}};
+  const[loginAttempts,setLoginAttempts]=useState({});
+  
+  // Funciones de validación
+  const validatePassword=(pwd)=>{if(!pwd)return"La contraseña es obligatoria.";if(pwd.length<8)return"La contraseña debe tener mínimo 8 caracteres.";if(!/[A-Z]/.test(pwd))return"La contraseña debe contener al menos una letra mayúscula.";if(!/[a-z]/.test(pwd))return"La contraseña debe contener al menos una letra minúscula.";if(!/[0-9]/.test(pwd))return"La contraseña debe contener al menos un número.";if(!/[!@#$%^&*()_+\-={}[\]|\\:;"'<>,.?/~`]/.test(pwd))return"La contraseña debe contener al menos un carácter especial.";return null;};
+  
+  const validateEmail=(email)=>{if(!email||!email.match(/^[^\s@]+@[^\s@]+\.(com|co)$/i))return"Correo inválido.";return null;};
+  
+  const validatePhone=(phone)=>{if(!phone&&mode==="register")return"El teléfono es obligatorio.";if(phone&&!/^[0-9]+$/.test(phone))return"El teléfono debe contener solo números.";if(phone&&users.find(u=>u.phone===phone))return"Este número de teléfono ya está registrado.";return null;};
+  
+  // Actualizar campo con validación en tiempo real
+  const s=(k)=>e=>{const value=e.target.value;setForm(f=>({...f,[k]:value}));let error=null;if(k==="password"&&value)error=validatePassword(value);if(k==="confirm"&&mode==="register"&&value)error=(value!==form.password)?"Las contraseñas no coinciden.":null;if(k==="email"&&value)error=validateEmail(value);if(k==="phone"&&value)error=validatePhone(value);setFieldErrors(prev=>({...prev,[k]:error}));setErr("");};
+  
+  // Determinar si el formulario es válido
+  const isFormValid=()=>{if(mode==="login"){return form.email&&form.password&&!fieldErrors.email;}if(mode==="register"){const pwdValid=form.password&&!validatePassword(form.password);const emailValid=form.email&&!validateEmail(form.email);const phoneValid=form.phone&&!validatePhone(form.phone);const confirmValid=form.confirm&&form.password===form.confirm;return form.name.trim()&&emailValid&&phoneValid&&pwdValid&&confirmValid&&acceptData&&acceptTerms;}};
+  
+  const login=()=>{setErr("");const emailErr=validateEmail(form.email);if(emailErr){setErr(emailErr);setFieldErrors({email:emailErr});return;}const u=users.find(u=>u.email===form.email);if(!u){setErr(t.auth.wrongCreds);return;}if(!u.active){setErr("La cuenta está inactiva. Contacta al administrador.");return;}const attemptsKey=form.email;const attempts=loginAttempts[attemptsKey]||0;if(attempts>=5){setErr("Cuenta bloqueada por múltiples intentos fallidos. Intenta más tarde.");return;}if(!verifyPassword(form.password,u.password)){const newAttempts=attempts+1;setLoginAttempts(prev=>({...prev,[attemptsKey]:newAttempts}));setErr(t.auth.wrongCreds);setTimeout(()=>setLoginAttempts(prev=>({...prev,[attemptsKey]:0})),60000);return;}setLoginAttempts(prev=>({...prev,[attemptsKey]:0}));const updatedUser={...u,lastLogin:new Date().toISOString()};setUsers(p=>p.map(x=>x.id===u.id?updatedUser:x));onLogin(updatedUser);};
+  
+  const register=()=>{setErr("");if(!form.name.trim()){setErr("El nombre es obligatorio.");return;}if(!form.lastname.trim()){setErr("El apellido es obligatorio.");return;}const emailErr=validateEmail(form.email);if(emailErr){setErr(emailErr);setFieldErrors({email:emailErr});return;}const phoneErr=validatePhone(form.phone);if(phoneErr){setErr(phoneErr);setFieldErrors({phone:phoneErr});return;}const pwdErr=validatePassword(form.password);if(pwdErr){setErr(pwdErr);setFieldErrors({password:pwdErr});return;}if(form.password!==form.confirm){setErr(t.auth.pwdMismatch);setFieldErrors({confirm:t.auth.pwdMismatch});return;}if(!acceptData||!acceptTerms){setErr(t.config.acceptTerms);return;}const hashedPwd=hashPassword(form.password);const u={id:Date.now(),email:form.email,password:hashedPwd,role:"client",name:form.name,lastname:form.lastname,phone:form.phone,emailVerified:false,createdAt:todayStr(),lastLogin:null,active:true,failedAttempts:0};setUsers(p=>[...p,u]);setForm({name:"",lastname:"",email:"",phone:"",password:"",confirm:""});onLogin(u);};
+  
+  const handleKeyPress=e=>{if(e.key==="Enter"&&isFormValid()){e.preventDefault();mode==="login"?login():register();}};
+  
   return<main id="main-content"tabIndex={-1}style={{minHeight:"70vh",display:"flex",alignItems:"center",justifyContent:"center",padding:16}}>
     <div className="anim-fadeup"style={{width:"100%",maxWidth:420}}>
       <BackBtn onClick={()=>setPage("home")}/>
@@ -618,25 +651,43 @@ function AuthScreen({onLogin,setPage,initMode="login",users,setUsers}){
       </div>
       <Card style={{padding:32}}>
         <div style={{display:"flex",marginBottom:24,border:`1px solid ${col.sand}`,borderRadius:4,overflow:"hidden"}}role="tablist">
-          {["login","register"].map(m=><button key={m}role="tab"aria-selected={mode===m}onClick={()=>{setMode(m);setErr("");}}style={{flex:1,padding:"10px 0",border:"none",fontSize:13,fontWeight:500,background:mode===m?col.espresso:"transparent",color:mode===m?col.cream:col.g600,cursor:"pointer",transition:"all 0.2s"}}>{m==="login"?t.auth.login:t.auth.register}</button>)}
+          {["login","register"].map(m=><button key={m}role="tab"aria-selected={mode===m}onClick={()=>{setMode(m);setErr("");setFieldErrors({});}}style={{flex:1,padding:"10px 0",border:"none",fontSize:13,fontWeight:500,background:mode===m?col.espresso:"transparent",color:mode===m?col.cream:col.g600,cursor:"pointer",transition:"all 0.2s"}}>{m==="login"?t.auth.login:t.auth.register}</button>)}
         </div>
         <div style={{display:"flex",flexDirection:"column",gap:14}}onKeyPress={handleKeyPress}>
-          {mode==="register"&&<><Input label={t.auth.name}value={form.name}onChange={s("name")}placeholder="Tu nombre"/><Input label={t.auth.phone}type="tel"value={form.phone}onChange={s("phone")}placeholder="3001234567"/></>}
-          <Input label={t.auth.email}type="email"value={form.email}onChange={s("email")}placeholder="correo@ejemplo.com"/>
-          <Input label={t.auth.password}type="password"value={form.password}onChange={s("password")}placeholder="••••••••"/>
-          {mode==="register"&&<Input label={t.auth.confirmPwd}type="password"value={form.confirm}onChange={s("confirm")}placeholder="••••••••"/>}
-          {err&&<p role="alert"style={{color:"#9B1C1C",fontSize:13,background:"#FDECEA",padding:"10px 14px",borderRadius:4}}>{err}</p>}
+          {mode==="register"&&<>
+            <Input label={t.auth.name}value={form.name}onChange={s("name")}placeholder="Tu nombre"/>
+            <Input label="Apellido *"value={form.lastname}onChange={s("lastname")}placeholder="Tu apellido"/>
+          </>}
+          <div>
+            <Input label={t.auth.email}type="email"value={form.email}onChange={s("email")}placeholder="correo@ejemplo.com"/>
+            {fieldErrors.email&&<p role="alert"style={{color:"#9B1C1C",fontSize:12,marginTop:4}}>{fieldErrors.email}</p>}
+          </div>
+          {mode==="register"&&<div>
+            <Input label={t.auth.phone}type="tel"value={form.phone}onChange={s("phone")}placeholder="3001234567"inputMode="numeric"/>
+            {fieldErrors.phone&&<p role="alert"style={{color:"#9B1C1C",fontSize:12,marginTop:4}}>{fieldErrors.phone}</p>}
+          </div>}
+          <div>
+            <Input label={t.auth.password}type="password"showPasswordToggle={true}isPasswordVisible={showPassword}onTogglePassword={()=>setShowPassword(!showPassword)}value={form.password}onChange={s("password")}placeholder="Ingresa tu contraseña"/>
+            {fieldErrors.password&&<p role="alert"style={{color:"#9B1C1C",fontSize:12,marginTop:4}}>{fieldErrors.password}</p>}
+            {mode==="register"&&form.password&&!fieldErrors.password&&<p style={{color:"#1E7E34",fontSize:12,marginTop:4}}>✓ Contraseña válida</p>}
+          </div>
+          {mode==="register"&&<div>
+            <Input label={t.auth.confirmPassword}type="password"showPasswordToggle={true}isPasswordVisible={showConfirm}onTogglePassword={()=>setShowConfirm(!showConfirm)}value={form.confirm}onChange={s("confirm")}placeholder="Confirma tu contraseña"/>
+            {fieldErrors.confirm&&<p role="alert"style={{color:"#9B1C1C",fontSize:12,marginTop:4}}>{fieldErrors.confirm}</p>}
+            {mode==="register"&&form.confirm&&form.password===form.confirm&&!fieldErrors.password&&<p style={{color:"#1E7E34",fontSize:12,marginTop:4}}>✓ Las contraseñas coinciden</p>}
+          </div>}
+          {err&&<p role="alert"style={{color:"#9B1C1C",fontSize:13,background:"#FDECEA",padding:"10px 14px",borderRadius:4,margin:"8px 0"}}>{err}</p>}
           {mode==="register"&&<div style={{display:"flex",flexDirection:"column",gap:10,padding:"16px",background:col.sand,borderRadius:6}}>
             <label style={{display:"flex",alignItems:"flex-start",gap:10,cursor:"pointer",fontSize:13}}>
-              <input type="checkbox"checked={acceptData}onChange={e=>setAcceptData(e.target.checked)}style={{marginTop:2,cursor:"pointer",width:18,height:18}}/>
+              <input type="checkbox"checked={acceptData}onChange={e=>{setAcceptData(e.target.checked);setErr("");}}style={{marginTop:2,cursor:"pointer",width:18,height:18}}aria-label="Aceptar política de datos"/>
               <span>Acepto el <button style={{background:"none",border:"none",color:col.espresso,fontSize:13,fontWeight:600,cursor:"pointer",textDecoration:"underline",padding:0}}onClick={e=>{e.preventDefault();setPage("about-data")}}>tratamiento de datos personales</button></span>
             </label>
             <label style={{display:"flex",alignItems:"flex-start",gap:10,cursor:"pointer",fontSize:13}}>
-              <input type="checkbox"checked={acceptTerms}onChange={e=>setAcceptTerms(e.target.checked)}style={{marginTop:2,cursor:"pointer",width:18,height:18}}/>
+              <input type="checkbox"checked={acceptTerms}onChange={e=>{setAcceptTerms(e.target.checked);setErr("");}}style={{marginTop:2,cursor:"pointer",width:18,height:18}}aria-label="Aceptar términos y condiciones"/>
               <span>Acepto los <button style={{background:"none",border:"none",color:col.espresso,fontSize:13,fontWeight:600,cursor:"pointer",textDecoration:"underline",padding:0}}onClick={e=>{e.preventDefault();setPage("about-terms")}}>términos y condiciones</button></span>
             </label>
           </div>}
-          <Btn onClick={mode==="login"?login:register}style={{width:"100%",padding:"13px 0",fontSize:14,marginTop:4}}>{mode==="login"?t.auth.enter:t.auth.create}</Btn>
+          <Btn onClick={mode==="login"?login:register}style={{width:"100%",padding:"13px 0",fontSize:14,marginTop:4,opacity:isFormValid()?1:0.5,cursor:isFormValid()?"pointer":"not-allowed"}}disabled={!isFormValid()}>{mode==="login"?t.auth.enter:t.auth.create}</Btn>
           {mode==="register"&&<>
             <div style={{display:"flex",alignItems:"center",gap:8,margin:"16px 0",opacity:0.6}}><div style={{flex:1,height:"1px",background:col.sand}}/><span style={{fontSize:12,color:col.g600}}>O regístrate con</span><div style={{flex:1,height:"1px",background:col.sand}}/></div>
             <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10}}>
@@ -645,7 +696,7 @@ function AuthScreen({onLogin,setPage,initMode="login",users,setUsers}){
               <button onClick={()=>{alert("🚀 Instagram Login está en desarrollo. Pronto podrás registrarte con tu cuenta de Instagram.");}}style={{display:"flex",alignItems:"center",justifyContent:"center",gap:6,padding:"10px 0",background:col.sand,border:"none",borderRadius:4,cursor:"pointer",fontSize:12,fontFamily:"DM Sans,sans-serif",fontWeight:500,color:col.espresso,transition:"all 0.2s"}}onMouseOver={e=>e.target.style.background=col.taupe}onMouseOut={e=>e.target.style.background=col.sand}>📷 Instagram</button>
             </div>
           </>}
-          {mode==="login"&&<p style={{fontSize:11,color:col.g400,textAlign:"center",marginTop:12}}><button onClick={()=>setPage("recover-password")}style={{background:"none",border:"none",color:col.espresso,fontSize:12,cursor:"pointer",textDecoration:"underline",fontWeight:500,fontFamily:"DM Sans,sans-serif",marginBottom:8,display:"block",width:"100%"}}>{t.auth.forgotPassword}</button>{t.auth.demo}</p>}
+          {mode==="login"&&<p style={{fontSize:11,color:col.g400,textAlign:"center",marginTop:12}}><button onClick={()=>setPage("recover-password")}style={{background:"none",border:"none",color:col.espresso,fontSize:12,cursor:"pointer",textDecoration:"underline",fontWeight:500,fontFamily:"DM Sans,sans-serif",marginBottom:8,display:"block",width:"100%"}}>{t.auth.forgotPassword}</button></p>}
         </div>
       </Card>
     </div>
@@ -739,6 +790,8 @@ function RecoverPasswordScreen({setPage,users}){
 function ResetPasswordScreen({token,setPage,users,setUsers}){
   const{t}=useLang();const{hc}=useA11y();const col=cc(hc);
   const[pwd,setPwd]=useState({new:"",confirm:""});
+  const[showNewPassword,setShowNewPassword]=useState(false);
+  const[showConfirmPassword,setShowConfirmPassword]=useState(false);
   const[loading,setLoading]=useState(false);
   const[err,setErr]=useState("");
   const[success,setSuccess]=useState(false);
@@ -758,12 +811,7 @@ function ResetPasswordScreen({token,setPage,users,setUsers}){
     }
   },[token]);
 
-  const validatePassword=password=>{
-    if(!password||password.length<8)return"Mínimo 8 caracteres";
-    if(!/[a-zA-Z]/.test(password))return"Debe contener letras";
-    if(!/[0-9]/.test(password))return"Debe contener números";
-    return null;
-  };
+  const validatePassword=(pwd)=>{if(!pwd)return"La contraseña es obligatoria.";if(pwd.length<8)return"La contraseña debe tener mínimo 8 caracteres.";if(!/[A-Z]/.test(pwd))return"La contraseña debe contener al menos una letra mayúscula.";if(!/[a-z]/.test(pwd))return"La contraseña debe contener al menos una letra minúscula.";if(!/[0-9]/.test(pwd))return"La contraseña debe contener al menos un número.";if(!/[!@#$%^&*()_+\-={}[\]|\\:;"'<>,.?/~`]/.test(pwd))return"La contraseña debe contener al menos un carácter especial.";return null;};
 
   const handleReset=async()=>{
     setErr("");
@@ -782,9 +830,10 @@ function ResetPasswordScreen({token,setPage,users,setUsers}){
     const tokenData=localStorage.getItem(`pwd_reset_${token}`);
     const{email}=JSON.parse(tokenData);
     
-    // Actualizar contraseña del usuario
+    // Actualizar contraseña del usuario con hash
+    const hashedPwd=hashPassword(pwd.new);
     const updatedUsers=users.map(u=>
-      u.email===email?{...u,password:pwd.new}:u
+      u.email===email?{...u,password:hashedPwd}:u
     );
     setUsers(updatedUsers);
     
@@ -824,6 +873,9 @@ function ResetPasswordScreen({token,setPage,users,setUsers}){
     </main>;
   }
 
+  const newPwdErr=validatePassword(pwd.new);
+  const isValid=pwd.new&&pwd.confirm&&pwd.new===pwd.confirm&&!newPwdErr;
+
   return<main id="main-content"tabIndex={-1}style={{minHeight:"70vh",display:"flex",alignItems:"center",justifyContent:"center",padding:16}}>
     <div className="anim-fadeup"style={{width:"100%",maxWidth:420}}>
       <BackBtn onClick={()=>setPage("login")}/>
@@ -835,16 +887,24 @@ function ResetPasswordScreen({token,setPage,users,setUsers}){
         <h3 style={{fontSize:18,fontWeight:600,marginBottom:8,color:col.espresso}}>{t.auth.resetTitle}</h3>
         <p style={{fontSize:13,color:col.g600,marginBottom:20}}>{t.auth.resetSub}</p>
         <div style={{display:"flex",flexDirection:"column",gap:14}}onKeyPress={handleKeyPress}>
-          <Input label={t.auth.newPassword}type="password"value={pwd.new}onChange={e=>setPwd(p=>({...p,new:e.target.value}))}placeholder="••••••••"disabled={loading}/>
-          <Input label={t.auth.confirmPassword}type="password"value={pwd.confirm}onChange={e=>setPwd(p=>({...p,confirm:e.target.value}))}placeholder="••••••••"disabled={loading}/>
+          <Input label={t.auth.newPassword}showPasswordToggle={true}isPasswordVisible={showNewPassword}onTogglePassword={()=>setShowNewPassword(!showNewPassword)}value={pwd.new}onChange={e=>setPwd(p=>({...p,new:e.target.value}))}placeholder="Ingresa tu nueva contraseña"disabled={loading}/>
+          {pwd.new&&newPwdErr&&<p role="alert"style={{color:"#9B1C1C",fontSize:12}}>{newPwdErr}</p>}
+          {pwd.new&&!newPwdErr&&<p style={{color:"#1E7E34",fontSize:12}}>✓ Contraseña válida</p>}
+          <Input label={t.auth.confirmPassword}showPasswordToggle={true}isPasswordVisible={showConfirmPassword}onTogglePassword={()=>setShowConfirmPassword(!showConfirmPassword)}value={pwd.confirm}onChange={e=>setPwd(p=>({...p,confirm:e.target.value}))}placeholder="Confirma tu nueva contraseña"disabled={loading}/>
+          {pwd.confirm&&pwd.new!==pwd.confirm&&<p role="alert"style={{color:"#9B1C1C",fontSize:12}}>Las contraseñas no coinciden</p>}
+          {pwd.confirm&&pwd.new===pwd.confirm&&!newPwdErr&&<p style={{color:"#1E7E34",fontSize:12}}>✓ Las contraseñas coinciden</p>}
           {err&&<p role="alert"style={{color:"#9B1C1C",fontSize:13,background:"#FDECEA",padding:"10px 14px",borderRadius:4}}>{err}</p>}
-          <div style={{background:col.sand,padding:12,borderRadius:6,fontSize:12,color:col.g600}}>
-            <p style={{fontWeight:600,marginBottom:6}}>Requisitos de seguridad:</p>
-            <ul style={{marginLeft:16,color:pwd.new.length>=8?"#1E7E34":col.g600}}><li>✓ {pwd.new.length}≥8 caracteres</li></ul>
-            <ul style={{marginLeft:16,color:/[a-zA-Z]/.test(pwd.new)?"#1E7E34":col.g600}}><li>✓ Contiene letras</li></ul>
-            <ul style={{marginLeft:16,color:/[0-9]/.test(pwd.new)?"#1E7E34":col.g600}}><li>✓ Contiene números</li></ul>
+          <div style={{background:col.sand,padding:12,borderRadius:6,fontSize:11,color:col.g600}}>
+            <p style={{fontWeight:600,marginBottom:8,color:col.espresso}}>Requisitos de seguridad:</p>
+            <div style={{display:"flex",flexDirection:"column",gap:4}}>
+              <p style={{color:pwd.new.length>=8?"#1E7E34":col.g600}}>✓ Mínimo 8 caracteres</p>
+              <p style={{color:/[A-Z]/.test(pwd.new)?"#1E7E34":col.g600}}>✓ Al menos una mayúscula</p>
+              <p style={{color:/[a-z]/.test(pwd.new)?"#1E7E34":col.g600}}>✓ Al menos una minúscula</p>
+              <p style={{color:/[0-9]/.test(pwd.new)?"#1E7E34":col.g600}}>✓ Al menos un número</p>
+              <p style={{color:/@|#|\$|%|&|!/.test(pwd.new)?"#1E7E34":col.g600}}>✓ Al menos un carácter especial (@, #, $, %, &, !)</p>
+            </div>
           </div>
-          <Btn onClick={handleReset}disabled={loading}style={{width:"100%",padding:"13px 0",fontSize:14}}>{loading?"Procesando...":t.auth.resetBtn}</Btn>
+          <Btn onClick={handleReset}disabled={loading||!isValid}style={{width:"100%",padding:"13px 0",fontSize:14}}>{loading?"Procesando...":t.auth.resetBtn}</Btn>
           <button onClick={()=>setPage("login")}style={{width:"100%",padding:"10px",background:"transparent",border:`1px solid ${col.sand}`,borderRadius:4,color:col.espresso,fontSize:13,cursor:"pointer",fontWeight:500,fontFamily:"DM Sans,sans-serif",marginTop:8}}>{t.auth.backToLogin}</button>
         </div>
       </Card>
@@ -875,10 +935,12 @@ function ProfilePage({user,setUser,appointments,users,setUsers,setPage}){
   };
 
   const changePwd=()=>{
-    if(pwd.current!==user.password){showToast(t.profile.pwdWrong,"error");return;}
+    if(!verifyPassword(pwd.current,user.password)){showToast(t.profile.pwdWrong,"error");return;}
     if(pwd.new!==pwd.confirm){showToast(t.profile.pwdMismatch,"error");return;}
     if(!pwd.new){showToast(t.auth.fillAll,"error");return;}
-    setUser({...user,password:pwd.new});setUsers(p=>p.map(u=>u.id===user.id?{...u,password:pwd.new}:u));
+    if(pwd.new===pwd.current){showToast("La nueva contraseña debe ser diferente a la actual.","error");return;}
+    const hashedPwd=hashPassword(pwd.new);
+    setUser({...user,password:hashedPwd});setUsers(p=>p.map(u=>u.id===user.id?{...u,password:hashedPwd}:u));
     setPwdOpen(false);setPwd({current:"",new:"",confirm:""});showToast(t.profile.pwdChanged);
   };
 
@@ -1069,7 +1131,11 @@ function UserFormModal({data,onClose,onSave}){
   const s=k=>e=>setForm(f=>({...f,[k]:e.target.value}));
   const save=()=>{
     if(!form.name||!form.email||!form.password){setErr(t.auth.fillAll);return;}
-    onSave(isEdit?{...form,id:data.id}:form);
+    const finalForm={...form};
+    if(!isEdit||form.password!==data.password){
+      finalForm.password=hashPassword(form.password);
+    }
+    onSave(isEdit?{...finalForm,id:data.id}:finalForm);
   };
   return<Modal title={isEdit?t.profile.editUser:t.profile.newUser.replace("+ ","")}onClose={onClose}>
     <div style={{display:"flex",flexDirection:"column",gap:16}}>
@@ -1297,7 +1363,7 @@ function AdminPortal({user,appointments,setAppointments,services,setServices,pro
       {sec==="services"&&<div className="anim-fadeup">
         <div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:28}}>
           <h2 className="display"style={{fontSize:36,fontWeight:300,color:col.espresso}}>{t.admin.services}</h2>
-          <Btn onClick={()=>setModal({type:"addService"})}>{t.admin.newService}</Btn>
+          <Btn onClick={()=>{setModal({type:"addService"}); setEditService({})}}>{t.admin.newService}</Btn>
         </div>
         <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(280px,1fr))",gap:14}}>
           {services.map(svc=><Card key={svc.id}style={{padding:16,opacity:svc.active?1:0.55}}><div style={{marginBottom:12,borderRadius:6,overflow:"hidden",background:col.sand,height:180,display:"flex",alignItems:"center",justifyContent:"center",position:"relative"}}>{svc.image?<img src={svc.image}alt={svc.name}style={{width:"100%",height:"100%",objectFit:"cover"}}/>:<div style={{fontSize:64,opacity:0.5}}>{EMOJI[svc.category]||"🌿"}</div>}</div><div style={{display:"flex",justifyContent:"space-between",alignItems:"flex-start",marginBottom:12}}><div><span style={{fontSize:11,background:col.sand,padding:"2px 8px",borderRadius:10,color:col.brown}}>{svc.category}</span><h3 style={{fontWeight:500,marginTop:6,marginBottom:4,color:col.espresso}}>{svc.name}</h3><p style={{fontSize:13,color:col.g600}}>{svc.duration} {t.min} · {fmt(svc.price)}</p></div></div><div style={{display:"flex",gap:8}}><button onClick={()=>{document.querySelector(`input[data-service-id="${svc.id}"]`)?.click()}}style={{flex:1,fontSize:11,background:col.espresso,border:"none",color:col.cream,borderRadius:4,padding:"6px",cursor:"pointer"}}>📷 Foto</button><button onClick={()=>setServices(p=>p.map(s=>s.id===svc.id?{...s,active:!s.active}:s))}aria-pressed={svc.active}style={{flex:1,fontSize:11,border:`1px solid ${svc.active?C.sage:col.taupe}`,background:"none",borderRadius:4,color:svc.active?C.sage:col.taupe,cursor:"pointer",fontFamily:"DM Sans,sans-serif"}}>{svc.active?"✓":"✕"}</button></div><input type="file"accept="image/*"data-service-id={svc.id}onChange={async e=>{const file=e.target.files?.[0];if(file){const compressed=await compressImage(file,600,0.75);setServices(p=>p.map(s=>s.id===svc.id?{...s,image:compressed}:s));setImgToast({msg:"✓ Imagen del servicio guardada",type:"success"});setTimeout(()=>setImgToast(null),2500)}}}style={{display:"none"}}/></Card>)}
@@ -1313,20 +1379,20 @@ function AdminPortal({user,appointments,setAppointments,services,setServices,pro
         </div>
       </div>}
       {sec==="config"&&<div className="anim-fadeup">
-        <h2 className="display"style={{fontSize:36,fontWeight:300,marginBottom:28,color:col.espresso}}>Configuracion del Sistema 🔧</h2>
+        <h2 className="display"style={{fontSize:36,fontWeight:300,marginBottom:28,color:col.espresso}}>{t.config.configTitle}</h2>
         <div style={{display:"flex",gap:12,flexWrap:"wrap",marginBottom:24,borderBottom:`1px solid ${col.sand}`,paddingBottom:16}}>
-          {["general","usuarios","servicios","empleados","agenda","pagos","notif","inventario","reportes","seguridad","imagenes","personalizacion"].map(tab=><button key={tab}onClick={()=>setConfigTab(tab)}style={{padding:"8px 16px",background:configTab===tab?col.espresso:"transparent",border:`1px solid ${configTab===tab?col.brown:col.sand}`,borderRadius:6,color:configTab===tab?col.cream:col.g600,fontSize:12,cursor:"pointer",transition:"all 0.2s",fontFamily:"DM Sans,sans-serif",fontWeight:configTab===tab?600:400}}>{tab==="general"?"General":tab==="usuarios"?"Usuarios":tab==="servicios"?"Servicios":tab==="empleados"?"Empleados":tab==="agenda"?"Agenda":tab==="pagos"?"Pagos":tab==="notif"?"Notificaciones":tab==="inventario"?"Inventario":tab==="reportes"?"Reportes":tab==="seguridad"?"Seguridad":tab==="imagenes"?"Imágenes Landing":"Personalizacion"}</button>)}
+          {["general","usuarios","servicios","empleados","agenda","pagos","notif","reportes","seguridad","imagenes","personalizacion"].map(tab=><button key={tab}onClick={()=>setConfigTab(tab)}style={{padding:"8px 16px",background:configTab===tab?col.espresso:"transparent",border:`1px solid ${configTab===tab?col.brown:col.sand}`,borderRadius:6,color:configTab===tab?col.cream:col.g600,fontSize:12,cursor:"pointer",transition:"all 0.2s",fontFamily:"DM Sans,sans-serif",fontWeight:configTab===tab?600:400}}>{tab==="general"?t.config.general:tab==="usuarios"?t.config.usuarios:tab==="servicios"?t.config.servicios:tab==="empleados"?t.config.empleados:tab==="agenda"?t.config.agenda:tab==="pagos"?t.config.pagos:tab==="notif"?t.config.notif:tab==="reportes"?t.config.reportes:tab==="seguridad"?t.config.seguridad:tab==="imagenes"?t.config.imagenes:t.config.personalizacion}</button>)}
         </div>
         
         {configTab==="general"&&<div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:24}}>
-          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>Informacion General</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>Nombre Comercial</Lbl><Input value={companyData.businessName||"Aura Spa"}onChange={e=>setCompanyData(p=>({...p,businessName:e.target.value}))}/></div><div><Lbl>Razon Social</Lbl><Input value={companyData.legalName||"Aura Spa S.A.S"}onChange={e=>setCompanyData(p=>({...p,legalName:e.target.value}))}/></div><div><Lbl>NIT / RUT</Lbl><Input value={companyData.nit||"9999999999-9"}onChange={e=>setCompanyData(p=>({...p,nit:e.target.value}))}/></div></div></Card>
-          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>Ubicacion</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>Direccion</Lbl><textarea value={companyData.address}onChange={e=>setCompanyData(p=>({...p,address:e.target.value}))}rows={2}style={{width:"100%",border:`1px solid ${col.sand}`,borderRadius:4,padding:"10px 14px",fontSize:13,fontFamily:"DM Sans,sans-serif",color:col.espresso,background:col.white}}/></div><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}><div><Lbl>Departamento</Lbl><select value={companyData.state||"Cundinamarca"}onChange={e=>{setCompanyData(p=>({...p,state:e.target.value,city:DEPARTMENTS_COLOMBIA[e.target.value]?.cities[0]||""}))}}style={{width:"100%",padding:"10px",border:`1px solid ${col.sand}`,borderRadius:4,fontSize:13,color:col.espresso,background:col.white,cursor:"pointer",fontFamily:"DM Sans,sans-serif"}}><option value="">Seleccionar departamento...</option>{Object.keys(DEPARTMENTS_COLOMBIA).sort().map(dept=><option key={dept}value={dept}>{dept}</option>)}</select></div><div><Lbl>Ciudad</Lbl><select value={companyData.city||"Bogotá"}onChange={e=>setCompanyData(p=>({...p,city:e.target.value}))}style={{width:"100%",padding:"10px",border:`1px solid ${col.sand}`,borderRadius:4,fontSize:13,color:col.espresso,background:col.white,cursor:"pointer",fontFamily:"DM Sans,sans-serif"}}><option value="">Seleccionar ciudad...</option>{DEPARTMENTS_COLOMBIA[companyData.state||"Cundinamarca"]?.cities.map(city=><option key={city}value={city}>{city}</option>)||<option>Sin ciudades</option>}</select></div></div></div></Card>
-          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>Contacto</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>Telefono Principal</Lbl><Input value={companyData.phone}onChange={e=>setCompanyData(p=>({...p,phone:e.target.value}))}/></div><div><Lbl>Correo Electronico</Lbl><Input type="email"value={companyData.email}onChange={e=>setCompanyData(p=>({...p,email:e.target.value}))}/></div></div></Card>
-          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>Horarios</h3><div style={{display:"flex",flexDirection:"column",gap:16}}><div><h4 style={{fontSize:14,fontWeight:500,color:col.espresso,marginBottom:8}}>Lunes - Viernes</h4><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}><div><Lbl>Hora Apertura</Lbl><Input type="time"value={companyData.weekStart||"09:00"}onChange={e=>setCompanyData(p=>({...p,weekStart:e.target.value}))}/></div><div><Lbl>Hora Cierre</Lbl><Input type="time"value={companyData.weekEnd||"20:00"}onChange={e=>setCompanyData(p=>({...p,weekEnd:e.target.value}))}/></div></div><p style={{fontSize:12,color:col.g600,marginTop:4}}>{companyData.weekStart||"09:00"} - {companyData.weekEnd||"20:00"}</p></div><div><h4 style={{fontSize:14,fontWeight:500,color:col.espresso,marginBottom:8}}>Sábado</h4><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}><div><Lbl>Hora Apertura</Lbl><Input type="time"value={companyData.satStart||"09:00"}onChange={e=>setCompanyData(p=>({...p,satStart:e.target.value}))}/></div><div><Lbl>Hora Cierre</Lbl><Input type="time"value={companyData.satEnd||"18:00"}onChange={e=>setCompanyData(p=>({...p,satEnd:e.target.value}))}/></div></div><p style={{fontSize:12,color:col.g600,marginTop:4}}>{companyData.satStart||"09:00"} - {companyData.satEnd||"18:00"}</p></div><div><h4 style={{fontSize:14,fontWeight:500,color:col.espresso,marginBottom:8}}>Domingo</h4><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}><div><Lbl>Hora Apertura</Lbl><Input type="time"value={companyData.sunStart||"10:00"}onChange={e=>setCompanyData(p=>({...p,sunStart:e.target.value}))}/></div><div><Lbl>Hora Cierre</Lbl><Input type="time"value={companyData.sunEnd||"17:00"}onChange={e=>setCompanyData(p=>({...p,sunEnd:e.target.value}))}/></div></div><p style={{fontSize:12,color:col.g600,marginTop:4}}>{companyData.sunStart||"10:00"} - {companyData.sunEnd||"17:00"}</p></div></div></Card>
-          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>Redes Sociales</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>Instagram</Lbl><Input placeholder="@auraspa"value={companyData.instagram||""}onChange={e=>setCompanyData(p=>({...p,instagram:e.target.value}))}/></div><div><Lbl>Facebook</Lbl><Input placeholder="facebook.com/auraspa"value={companyData.facebook||""}onChange={e=>setCompanyData(p=>({...p,facebook:e.target.value}))}/></div><div><Lbl>WhatsApp</Lbl><Input placeholder="+57 300 123 4567"value={companyData.whatsapp||""}onChange={e=>setCompanyData(p=>({...p,whatsapp:e.target.value}))}/></div></div></Card>
-          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>Mensaje de Bienvenida</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>Mensaje para Clientes</Lbl><textarea value={companyData.welcomeMsg||"Bienvenido a Aura Spa"}onChange={e=>setCompanyData(p=>({...p,welcomeMsg:e.target.value}))}rows={3}style={{width:"100%",border:`1px solid ${col.sand}`,borderRadius:4,padding:"10px 14px",fontSize:13,fontFamily:"DM Sans,sans-serif",color:col.espresso,background:col.white}}/></div></div></Card>
+          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>{t.config.infoGeneral}</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>{t.config.businessName}</Lbl><Input value={companyData.businessName||"Aura Spa"}onChange={e=>setCompanyData(p=>({...p,businessName:e.target.value}))}/></div><div><Lbl>{t.config.legalName}</Lbl><Input value={companyData.legalName||"Aura Spa S.A.S"}onChange={e=>setCompanyData(p=>({...p,legalName:e.target.value}))}/></div><div><Lbl>{t.config.nit}</Lbl><Input value={companyData.nit||"9999999999-9"}onChange={e=>setCompanyData(p=>({...p,nit:e.target.value}))}/></div></div></Card>
+          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>{t.config.location}</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>{t.config.address}</Lbl><textarea value={companyData.address}onChange={e=>setCompanyData(p=>({...p,address:e.target.value}))}rows={2}style={{width:"100%",border:`1px solid ${col.sand}`,borderRadius:4,padding:"10px 14px",fontSize:13,fontFamily:"DM Sans,sans-serif",color:col.espresso,background:col.white}}/></div><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:8}}><div><Lbl>{t.config.dept}</Lbl><select value={companyData.state||"Cundinamarca"}onChange={e=>{setCompanyData(p=>({...p,state:e.target.value,city:DEPARTMENTS_COLOMBIA[e.target.value]?.cities[0]||""}))}}style={{width:"100%",padding:"10px",border:`1px solid ${col.sand}`,borderRadius:4,fontSize:13,color:col.espresso,background:col.white,cursor:"pointer",fontFamily:"DM Sans,sans-serif"}}><option value="">Seleccionar departamento...</option>{Object.keys(DEPARTMENTS_COLOMBIA).sort().map(dept=><option key={dept}value={dept}>{dept}</option>)}</select></div><div><Lbl>{t.config.city}</Lbl><select value={companyData.city||"Bogotá"}onChange={e=>setCompanyData(p=>({...p,city:e.target.value}))}style={{width:"100%",padding:"10px",border:`1px solid ${col.sand}`,borderRadius:4,fontSize:13,color:col.espresso,background:col.white,cursor:"pointer",fontFamily:"DM Sans,sans-serif"}}><option value="">Seleccionar ciudad...</option>{DEPARTMENTS_COLOMBIA[companyData.state||"Cundinamarca"]?.cities.map(city=><option key={city}value={city}>{city}</option>)||<option>Sin ciudades</option>}</select></div></div></div></Card>
+          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>{t.config.contact}</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>{t.config.phone}</Lbl><Input value={companyData.phone}onChange={e=>setCompanyData(p=>({...p,phone:e.target.value}))}/></div><div><Lbl>{t.config.email}</Lbl><Input type="email"value={companyData.email}onChange={e=>setCompanyData(p=>({...p,email:e.target.value}))}/></div></div></Card>
+          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>{t.config.schedules}</h3><div style={{display:"flex",flexDirection:"column",gap:16}}><div><h4 style={{fontSize:14,fontWeight:500,color:col.espresso,marginBottom:8}}>{t.config.weekdays}</h4><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}><div><Lbl>{t.config.openTime}</Lbl><Input type="time"value={companyData.weekStart||"09:00"}onChange={e=>setCompanyData(p=>({...p,weekStart:e.target.value}))}/></div><div><Lbl>{t.config.closeTime}</Lbl><Input type="time"value={companyData.weekEnd||"20:00"}onChange={e=>setCompanyData(p=>({...p,weekEnd:e.target.value}))}/></div></div><p style={{fontSize:12,color:col.g600,marginTop:4}}>{companyData.weekStart||"09:00"} - {companyData.weekEnd||"20:00"}</p></div><div><h4 style={{fontSize:14,fontWeight:500,color:col.espresso,marginBottom:8}}>{t.config.saturday}</h4><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}><div><Lbl>{t.config.openTime}</Lbl><Input type="time"value={companyData.satStart||"09:00"}onChange={e=>setCompanyData(p=>({...p,satStart:e.target.value}))}/></div><div><Lbl>{t.config.closeTime}</Lbl><Input type="time"value={companyData.satEnd||"18:00"}onChange={e=>setCompanyData(p=>({...p,satEnd:e.target.value}))}/></div></div><p style={{fontSize:12,color:col.g600,marginTop:4}}>{companyData.satStart||"09:00"} - {companyData.satEnd||"18:00"}</p></div><div><h4 style={{fontSize:14,fontWeight:500,color:col.espresso,marginBottom:8}}>{t.config.sunday}</h4><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12}}><div><Lbl>{t.config.openTime}</Lbl><Input type="time"value={companyData.sunStart||"10:00"}onChange={e=>setCompanyData(p=>({...p,sunStart:e.target.value}))}/></div><div><Lbl>{t.config.closeTime}</Lbl><Input type="time"value={companyData.sunEnd||"17:00"}onChange={e=>setCompanyData(p=>({...p,sunEnd:e.target.value}))}/></div></div><p style={{fontSize:12,color:col.g600,marginTop:4}}>{companyData.sunStart||"10:00"} - {companyData.sunEnd||"17:00"}</p></div></div></Card>
+          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>{t.config.socialMedia}</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>{t.config.instagram}</Lbl><Input placeholder="@auraspa"value={companyData.instagram||""}onChange={e=>setCompanyData(p=>({...p,instagram:e.target.value}))}/></div><div><Lbl>{t.config.facebook}</Lbl><Input placeholder="facebook.com/auraspa"value={companyData.facebook||""}onChange={e=>setCompanyData(p=>({...p,facebook:e.target.value}))}/></div><div><Lbl>{t.config.whatsapp}</Lbl><Input placeholder="+57 300 123 4567"value={companyData.whatsapp||""}onChange={e=>setCompanyData(p=>({...p,whatsapp:e.target.value}))}/></div></div></Card>
+          <Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>{t.config.welcomeMsg}</h3><div style={{display:"flex",flexDirection:"column",gap:12}}><div><Lbl>{t.config.msgClients}</Lbl><textarea value={companyData.welcomeMsg||"Bienvenido a Aura Spa"}onChange={e=>setCompanyData(p=>({...p,welcomeMsg:e.target.value}))}rows={3}style={{width:"100%",border:`1px solid ${col.sand}`,borderRadius:4,padding:"10px 14px",fontSize:13,fontFamily:"DM Sans,sans-serif",color:col.espresso,background:col.white}}/></div></div></Card>
         </div>}
-        <div style={{display:configTab==="general"?"flex":"none",gap:8,marginTop:24,justifyContent:"flex-end"}}><Btn onClick={()=>{const toast=document.createElement("div");toast.style.cssText="position:fixed;top:20px;right:20px;background:#3D7454;color:#FAF7F2;padding:12px 20px;borderRadius:6px;fontSize:13px;zIndex:10000;fontWeight:500;";toast.textContent="✓ Datos guardados exitosamente";document.body.appendChild(toast);setTimeout(()=>toast.remove(),2500);}}style={{padding:"10px 20px"}}>Guardar Cambios</Btn></div>
+        <div style={{display:configTab==="general"?"flex":"none",gap:8,marginTop:24,justifyContent:"flex-end"}}><Btn onClick={()=>{const toast=document.createElement("div");toast.style.cssText="position:fixed;top:20px;right:20px;background:#3D7454;color:#FAF7F2;padding:12px 20px;borderRadius:6px;fontSize:13px;zIndex:10000;fontWeight:500;";toast.textContent="✓ Datos guardados exitosamente";document.body.appendChild(toast);setTimeout(()=>toast.remove(),2500);}}style={{padding:"10px 20px"}}>{t.config.save}</Btn></div>
         
         {configTab==="usuarios"&&
         <div>
@@ -1350,7 +1416,7 @@ function AdminPortal({user,appointments,setAppointments,services,setServices,pro
                 )}
               </div>
               )}
-              {!users || users.length === 0 && (
+              {(!users || users.length === 0) && (
               <p style={{color:col.g600,fontSize:13}}>Sin usuarios creados aun</p>
               )}
             </Card>
@@ -1414,7 +1480,7 @@ function AdminPortal({user,appointments,setAppointments,services,setServices,pro
               </div>
               )}
               {services.length === 0 && (
-              <p style={{color:col.g600,fontSize:13}}>Sin servicios registrados</p>
+              <p style={{color:col.g600,fontSize:13}}>{t.landing.noServices}</p>
               )}
             </Card>
             <Card style={{padding:28}}>
@@ -1422,23 +1488,23 @@ function AdminPortal({user,appointments,setAppointments,services,setServices,pro
               <div style={{display:"flex",flexDirection:"column",gap:12}}>
                 <div>
                   <Lbl>Nombre</Lbl>
-                  <Input value={editService?.name||""}onChange={e=>editService&&setEditService({...editService,name:e.target.value})}placeholder="Ej: Masaje Relajante"/>
+                  <Input value={editService?.name||""}onChange={e=>setEditService({...editService,name:e.target.value})}placeholder="Ej: Masaje Relajante"/>
                 </div>
                 <div>
                   <Lbl>Categoria</Lbl>
-                  <Input value={editService?.category||""}onChange={e=>editService&&setEditService({...editService,category:e.target.value})}placeholder="Ej: Masajes"/>
+                  <Input value={editService?.category||""}onChange={e=>setEditService({...editService,category:e.target.value})}placeholder="Ej: Masajes"/>
                 </div>
                 <div>
                   <Lbl>Duracion (min)</Lbl>
-                  <Input type="number"value={editService?.duration||""}onChange={e=>editService&&setEditService({...editService,duration:Number(e.target.value)})}placeholder="60"/>
+                  <Input type="number"value={editService?.duration||""}onChange={e=>setEditService({...editService,duration:Number(e.target.value)})}placeholder="60"/>
                 </div>
                 <div>
                   <Lbl>Precio COP</Lbl>
-                  <Input type="number"value={editService?.price||""}onChange={e=>editService&&setEditService({...editService,price:Number(e.target.value)})}placeholder="150000"/>
+                  <Input type="number"value={editService?.price||""}onChange={e=>setEditService({...editService,price:Number(e.target.value)})}placeholder="150000"/>
                 </div>
                 <div>
                   <Lbl>Comision %</Lbl>
-                  <Input type="number"value={editService?.commission||30}onChange={e=>editService&&setEditService({...editService,commission:Number(e.target.value)})}min="0"max="100"/>
+                  <Input type="number"value={editService?.commission||30}onChange={e=>setEditService({...editService,commission:Number(e.target.value)})}min="0"max="100"/>
                 </div>
                 <div style={{display:"flex",gap:8}}>
                   <Btn onClick={()=>{if(editService&&editService.id){setServices(p=>p.map(x=>x.id===editService.id?editService:x))}else if(editService){setServices(p=>[...p,{...editService,id:Date.now(),active:true}])}setEditService(null)}}style={{flex:1,padding:"10px"}}>Guardar</Btn>
@@ -1515,61 +1581,6 @@ function AdminPortal({user,appointments,setAppointments,services,setServices,pro
         
         {configTab==="notif"&&<div><Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>Configuracion de Notificaciones</h3><div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:14}}><div style={{border:`1px solid ${col.sand}`,padding:14,borderRadius:6}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}><input type="checkbox"id="email-confirm"checked={notifConfig.emailConfirm}onChange={e=>setNotifConfig(p=>({...p,emailConfirm:e.target.checked}))}/><label htmlFor="email-confirm"style={{fontSize:13,color:col.espresso,fontWeight:500}}>Confirmacion por Email</label></div><p style={{fontSize:12,color:col.g600}}>Correo cuando cliente reserva cita</p></div><div style={{border:`1px solid ${col.sand}`,padding:14,borderRadius:6}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}><input type="checkbox"id="email-reminder"checked={notifConfig.emailReminder}onChange={e=>setNotifConfig(p=>({...p,emailReminder:e.target.checked}))}/><label htmlFor="email-reminder"style={{fontSize:13,color:col.espresso,fontWeight:500}}>Recordatorio (24h antes)</label></div><p style={{fontSize:12,color:col.g600}}>Notificacion previa a la cita</p></div><div style={{border:`1px solid ${col.sand}`,padding:14,borderRadius:6}}><div style={{display:"flex",alignItems:"center",gap:8,marginBottom:8}}><input type="checkbox"id="whatsapp-notif"checked={notifConfig.whatsapp}onChange={e=>setNotifConfig(p=>({...p,whatsapp:e.target.checked}))}/><label htmlFor="whatsapp-notif"style={{fontSize:13,color:col.espresso,fontWeight:500}}>Notificaciones WhatsApp</label></div><p style={{fontSize:12,color:col.g600}}>Mensajes via WhatsApp Business</p></div></div><div style={{marginTop:16}}><Lbl>Template de Mensaje Personalizado</Lbl><textarea rows={3}value={notifConfig.template}onChange={e=>setNotifConfig(p=>({...p,template:e.target.value}))}placeholder="Hola {cliente}, tu cita en Aura Spa es el {fecha} a las {hora}"style={{width:"100%",border:`1px solid ${col.sand}`,borderRadius:4,padding:"10px 14px",fontSize:13,fontFamily:"DM Sans,sans-serif",color:col.espresso,background:col.white}}/></div><Btn onClick={()=>{}}style={{marginTop:12,width:"100%",padding:"12px"}}>Guardar Configuracion de Notificaciones</Btn></Card></div>}
         
-        {configTab==="inventario"&&
-        <div>
-          <h3 style={{fontSize:18,fontWeight:600,marginBottom:20,color:col.espresso}}>Control de Inventario</h3>
-          <div style={{display:"grid",gridTemplateColumns:"2fr 1fr",gap:24}}>
-            <Card style={{padding:28}}>
-              <h4 style={{fontSize:14,fontWeight:600,marginBottom:16,color:col.espresso}}>Productos Registrados</h4>
-              {inventory && inventory.length>0 && (
-              <div style={{display:"flex",flexDirection:"column",gap:10}}>
-                {inventory.map(item=>
-                <div key={item.id}style={{display:"flex",justifyContent:"space-between",alignItems:"center",padding:12,border:`1px solid ${col.sand}`,borderRadius:6,background:item.stock<item.min?"#FEE2E2":col.white}}>
-                  <div>
-                    <h5 style={{fontSize:13,fontWeight:600,color:col.espresso}}>{item.name}</h5>
-                    <p style={{fontSize:11,color:col.g600}}>Stock: {item.stock} (Min: {item.min}) · {item.provider}</p>
-                  </div>
-                  <div style={{display:"flex",gap:6}}>
-                    <button onClick={()=>setEditInv(item)}style={{padding:"4px 8px",fontSize:11,background:col.espresso,color:col.cream,border:"none",borderRadius:4,cursor:"pointer"}}>Editar</button>
-                    <button onClick={()=>setInventory(p=>p.filter(x=>x.id!==item.id))}style={{padding:"4px 8px",fontSize:11,background:"#9B1C1C",color:col.cream,border:"none",borderRadius:4,cursor:"pointer"}}>Eliminar</button>
-                  </div>
-                </div>
-                )}
-              </div>
-              )}
-              {!inventory || inventory.length === 0 && (
-              <p style={{color:col.g600,fontSize:13}}>Sin productos registrados</p>
-              )}
-            </Card>
-            <Card style={{padding:28}}>
-              <h4 style={{fontSize:14,fontWeight:600,marginBottom:16,color:col.espresso}}>{editInv?"Editar Producto":"Nuevo Producto"}</h4>
-              <div style={{display:"flex",flexDirection:"column",gap:12}}>
-                <div>
-                  <Lbl>Nombre del Producto</Lbl>
-                  <Input value={editInv?.name||""}onChange={e=>editInv&&setEditInv({...editInv,name:e.target.value})}placeholder="Ej: Aceite de Almendra"/>
-                </div>
-                <div>
-                  <Lbl>Stock Actual</Lbl>
-                  <Input type="number"value={editInv?.stock||0}onChange={e=>editInv&&setEditInv({...editInv,stock:Number(e.target.value)})}min="0"/>
-                </div>
-                <div>
-                  <Lbl>Stock Minimo</Lbl>
-                  <Input type="number"value={editInv?.min||0}onChange={e=>editInv&&setEditInv({...editInv,min:Number(e.target.value)})}min="0"/>
-                </div>
-                <div>
-                  <Lbl>Proveedor</Lbl>
-                  <Input value={editInv?.provider||""}onChange={e=>editInv&&setEditInv({...editInv,provider:e.target.value})}placeholder="Ej: Distribuidor A"/>
-                </div>
-                <div style={{display:"flex",gap:8}}>
-                  <Btn onClick={()=>{if(editInv?.id){setInventory(p=>p.map(x=>x.id===editInv.id?editInv:x))}else if(editInv){setInventory(p=>[...p,{...editInv,id:Date.now()}])}setEditInv(null)}}style={{flex:1,padding:"10px"}}>Guardar</Btn>
-                  <Btn variant="secondary"onClick={()=>setEditInv(null)}style={{flex:1,padding:"10px"}}>Cancelar</Btn>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-        }
-        
         {configTab==="reportes"&&<div><div style={{display:"grid",gridTemplateColumns:"repeat(auto-fit,minmax(250px,1fr))",gap:14,marginBottom:28}}>{((reportData)=>[{title:"Ingresos",icon:"💰",desc:"Total del mes",value:`$${reportData.totalIncome.toLocaleString("es-CO",{maximumFractionDigits:0})}`},{title:"Servicios",icon:"✨",desc:"Mas vendidos",value:`${reportData.topService?.name || "N/A"}`},{title:"Empleados",icon:"👩",desc:"Mayor venta",value:`${reportData.topProfessional?.name || "N/A"}`},{title:"Clientes",icon:"👥",desc:"Completadas",value:`${reportData.attendedCount}`},{title:"Tendencias",icon:"📈",desc:"Crecimiento",value:`+${reportData.growthPercent}%`}].map(rep=><Card key={rep.title}style={{padding:20,textAlign:"center",cursor:"pointer",transition:"all 0.2s"}}onMouseEnter={e=>e.currentTarget.style.transform="translateY(-4px)"}onMouseLeave={e=>e.currentTarget.style.transform="translateY(0)"}><div style={{fontSize:28,marginBottom:8}}>{rep.icon}</div><h4 style={{fontSize:14,fontWeight:600,color:col.espresso,marginBottom:4}}>{rep.title}</h4><p style={{fontSize:11,color:col.g600,marginBottom:8}}>{rep.desc}</p><p style={{fontSize:16,fontWeight:600,color:col.brown}}>{rep.value}</p></Card>))({totalIncome:services.reduce((sum,s)=>{const count=appointments.filter(a=>a.serviceId===s.id&&a.status==='attended').length;return sum+(count*(s.price||0));},0),topService:services.sort((a,b)=>appointments.filter(x=>x.serviceId===b.id&&x.status==='attended').length-appointments.filter(x=>x.serviceId===a.id&&x.status==='attended').length)[0],topProfessional:professionals.sort((a,b)=>appointments.filter(x=>x.professionalId===b.id&&x.status==='attended').length-appointments.filter(x=>x.professionalId===a.id&&x.status==='attended').length)[0],attendedCount:appointments.filter(a=>a.status==='attended').length,growthPercent:Math.round(((appointments.filter(a=>a.status==='attended').length/Math.max(appointments.length,1))*100))||0})}</div><Card style={{padding:20}}><h3 style={{fontSize:14,fontWeight:600,marginBottom:16,color:col.espresso}}>Detalles de Ingresos por Servicio</h3><table style={{width:"100%",fontSize:12,borderCollapse:"collapse"}}><thead><tr style={{borderBottom:`1px solid ${col.sand}`}}><th style={{textAlign:"left",padding:"8px 0",color:col.g600}}>Servicio</th><th style={{textAlign:"center",padding:"8px 0",color:col.g600}}>Vendidas</th><th style={{textAlign:"right",padding:"8px 0",color:col.g600}}>Ingresos</th></tr></thead><tbody>{services.map(svc=>{const count=appointments.filter(a=>a.serviceId===svc.id&&a.status==='attended').length;return<tr key={svc.id}style={{borderBottom:`1px solid ${col.sand}`}}><td style={{padding:"8px 0",color:col.espresso}}>{svc.name}</td><td style={{textAlign:"center",padding:"8px 0",color:col.espresso}}>{count}</td><td style={{textAlign:"right",padding:"8px 0",color:col.espresso,fontWeight:500}}>${(count*(svc.price||0)).toLocaleString("es-CO",{maximumFractionDigits:0})}</td></tr>})}</tbody></table></Card></div>}
         
         {configTab==="seguridad"&&<div><Card style={{padding:28}}><h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>Seguridad del Sistema</h3><div style={{display:"flex",flexDirection:"column",gap:14}}><div style={{border:`1px solid ${col.sand}`,padding:14,borderRadius:6}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}><span style={{fontSize:13,fontWeight:600,color:col.espresso}}>Copias de Seguridad Automaticas</span><Btn style={{fontSize:11,padding:"4px 12px"}}>Hacer Backup</Btn></div><p style={{fontSize:12,color:col.g600}}>Ultima copia: Hoy a las 2:30 AM</p></div><div style={{border:`1px solid ${col.sand}`,padding:14,borderRadius:6}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}><span style={{fontSize:13,fontWeight:600,color:col.espresso}}>Doble Autenticacion (2FA)</span><button style={{padding:"4px 12px",background:C.sage,border:"none",borderRadius:4,color:col.white,fontSize:11,cursor:"pointer",fontWeight:500}}>Activar</button></div></div><div style={{border:`1px solid ${col.sand}`,padding:14,borderRadius:6}}><div style={{display:"flex",justifyContent:"space-between",alignItems:"center",marginBottom:8}}><span style={{fontSize:13,fontWeight:600,color:col.espresso}}>Tiempo de Sesion</span><select style={{padding:"4px 8px",border:`1px solid ${col.sand}`,borderRadius:4,fontSize:11}}><option>15 minutos</option><option>30 minutos</option><option>1 hora</option><option>2 horas</option></select></div></div><div style={{marginTop:20,background:col.sand,padding:14,borderRadius:6}}><p style={{fontSize:12,color:col.brown,fontWeight:500}}>Historial de Auditoria: Acceso a todos los cambios en el sistema</p><Btn style={{fontSize:11,padding:"6px 12px",marginTop:8}}>Ver Logs</Btn></div></div></Card></div>}
@@ -1611,7 +1622,7 @@ function AdminPortal({user,appointments,setAppointments,services,setServices,pro
                 </Card>
                 
                 <Card style={{padding:28,gridColumn:"1 / -1"}}>
-                  <h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>🎠 Carrusel "Galería de Inspiración" (5 Imágenes)</h3>
+                  <h3 style={{fontSize:16,fontWeight:600,marginBottom:16,color:col.espresso}}>{t.config.carouselGallery}</h3>
                   <p style={{fontSize:12,color:col.g600,marginBottom:20}}>Sube hasta 5 imágenes para el carrusel profesional que se muestra en la sección de bienestar</p>
                   <div style={{display:"grid",gridTemplateColumns:"repeat(auto-fill,minmax(150px,1fr))",gap:12}}>
                     {[0,1,2,3,4].map(idx=>(
